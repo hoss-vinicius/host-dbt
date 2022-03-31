@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: zendesk_custom_fields_reason
+    description: '{{ doc("zendesk_custom_fields_reason_description") }}'
+    columns:
+      - name: ticket_id
+        description: Automatically assigned when the ticket is created
+      - name: reason
+        description: The propertie correspond to the "Title" text box about the "reason" in the admin interface.
+      - name: value
+        description: The propertie correspond to the "Tag" text box about the "reason" in the admin interface.

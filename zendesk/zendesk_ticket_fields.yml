@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: zendesk_ticket_fields
+    description: '{{ doc("zendesk_ticket_fields_description") }}'
+    columns:
+      - name: active
+        description: Whether this field is available
+      - name: agent_description
+        description: A description of the ticket field that only agents can see
+      - name: collapsed_for_agents
+        description: If true, the field is shown to agents by default. If false, the field is hidden alongside infrequently used fields. Classic interface only
+      - name: created_at
+        description: The time the custom ticket field was created
+      #- name: custom_field_options --unused column
+      #  description:
+      - name: description
+        description: Describes the purpose of the ticket field to users
+      - name: editable_in_portal
+        description: Whether this field is editable by end users in Help Center
+      - name: id
+        description: Automatically assigned when created
+      - name: position
+        description: The relative position of the ticket field on a ticket. Note that for accounts with ticket forms, positions are controlled by the different forms
+      - name: raw_description
+        description: The dynamic content placeholder if present, or the description value if not. See Dynamic Content
+      - name: raw_title
+        description: The dynamic content placeholder if present, or the title value if not. See Dynamic Content
+      - name: raw_title_in_portal
+        description: The dynamic content placeholder if present, or the "title_in_portal" value if not. See Dynamic Content
+      - name: regexp_for_validation
+        description: For "regexp" fields only. The validation pattern for a field value to be deemed valid
+      - name: removable
+        description: If false, this field is a system field that must be present on all tickets
+      - name: required
+        description: If true, agents must enter a value in the field to change the ticket status to solved
+      - name: required_in_portal
+        description: If true, end users must enter a value in the field to create the request
+      - name: sub_type_id
+        description: For system ticket fields of type "priority" and "status". Defaults to 0. A "priority" sub type of 1 removes the "Low" and "Urgent" options. A "status" sub type of 1 adds the "On-Hold" option
+      #- name: system_field_options --unused column
+      #  description:
+      - name: "tag"
+        description: For "checkbox" fields only. A tag added to tickets when the checkbox field is selected
+      - name: title
+        description: The title of the ticket field
+      - name: title_in_portal
+        description: The title of the ticket field for end users in Help Center
+      - name: type
+        description: System or custom field type. Editable for custom field types and only on creation. See Create Ticket Field
+      - name: updated_at
+        description: The time the custom ticket field was last updated
+      - name: url
+        description: The URL for this resource
+      - name: visible_in_portal
+        description: Whether this field is visible to end users in Help Center
+      - name: dt_ref
+        description: The reference date of data

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: zendesk_group_memberships
+    description: '{{ doc("zendesk_group_memberships_description") }}'
+    columns:
+      - name: created_at
+        description: The time the group was created
+      - name: default
+        description: If true, tickets assigned directly to the agent will assume this membership's group
+      - name: group_id
+        description: The id of a group
+      - name: id
+        description: Automatically assigned upon creation
+      - name: updated_at
+        description: The time of the last update of the group
+      - name: url
+        description: The API url of this record
+      - name: user_id
+        description: The id of an agent
+      - name: dt_ref
+        description: The reference date of data

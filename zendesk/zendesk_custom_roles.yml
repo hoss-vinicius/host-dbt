@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: zendesk_custom_roles
+    description: '{{ doc("zendesk_custom_roles_description") }}'
+    columns:
+      - name: assign_tickets_to_any_group
+        description: Whether or not the agent can assign tickets to any group
+      - name: created_at
+        description: The time the record was created
+      - name: description
+        description: A description of the role
+      - name: id
+        description: Automatically assigned on creation
+      - name: name
+        description: Name of the custom role
+      - name: role_type
+        description: The user's role id. It is 0 for a custom agent
+      - name: team_member_count
+        description: The number of team members assigned to this role
+      - name: updated_at
+        description: The time the record was last updated
+      - name: dt_ref
+        description: The reference date of data

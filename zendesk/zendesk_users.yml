@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: zendesk_users
+    description: '{{ doc("zendesk_users_description") }}'
+    columns:
+      - name: active
+        description: false if the user has been deleted
+      - name: alias
+        description: An alias displayed to end users
+      - name: created_at
+        description: The time the user was created
+      - name: custom_role_id
+        description: A custom role if the user is an agent on the Enterprise plan or above
+      - name: default_group_id
+        description: The id of the user's default group
+      - name: details
+        description: Any details you want to store about the user, such as an address
+      - name: email
+        description: The user's primary email address. *Writeable on create only. On update, a secondary email is added. See Email Address
+      - name: external_id
+        description: A unique identifier from another system. The API treats the id as case sensitive. Example "ian1" and "Ian1" are different users
+      - name: iana_time_zone
+        description: The time zone for the user
+      - name: id
+        description: Automatically assigned when the user is created
+      - name: last_login_at
+        description: The last time the user signed in to Zendesk Support
+      - name: locale
+        description: The user's locale. A BCP-47 compliant tag for the locale. If both locale and locale_id are present on create or update, locale_id is ignored and only locale is used.
+      - name: locale_id
+        description: The user's language identifier
+      - name: moderator
+        description: Designates whether the user has forum moderation capabilities
+      - name: name
+        description: The user's name
+      - name: notes
+        description: Any notes you want to store about the user
+      - name: only_private_comments
+        description: true if the user can only create private comments
+      - name: organization_id
+        description: The id of the user's organization. If the user has more than one organization memberships, the id of the user's default organization. If updating, see Organization ID
+      - name: phone
+        description: The user's primary phone number. See Phone Number below
+      #- name: photo # unused column
+      #  description: The user's profile picture represented as an Attachment object
+      - name: report_csv
+        description: Whether or not the user can access the CSV report on the Search tab of the Reporting page in the Support admin interface. See Analyzing Help Center search results in Help Center. Only available on the Support Professional or Suite Growth plan or above.
+      - name: restricted_agent
+        description: If the agent has any restrictions; false for admins and unrestricted agents, true for other agents
+      - name: role
+        description: The user's role. Possible values are end-user, agent, or admin
+      - name: role_type
+        description: The user's role id. 0 for a custom agent, 1 for a light agent, 2 for a chat agent, 3 for a chat agent added to the Support account as a contributor (Chat Phase 4), 4 for an admin, and 5 for a billing admin
+      - name: shared
+        description: If the user is shared from a different Zendesk Support instance. Ticket sharing accounts only
+      - name: shared_agent
+        description: If the user is a shared agent from a different Zendesk Support instance. Ticket sharing accounts only
+      - name: shared_phone_number
+        description: Whether the phone number is shared or not. See Phone Number below
+      - name: signature
+        description: The user's signature. Only agents and admins can have signatures
+      - name: suspended
+        description: If the agent is suspended. Tickets from suspended users are also suspended, and these users cannot sign in to the end user portal
+      #- name: tags # unused column
+      #  description: The user's tags. Only present if your account has user tagging enabled
+      - name: ticket_restriction
+        description: Specifies which tickets the user has access to. Possible values are organization, groups, assigned, requested, null
+      - name: time_zone
+        description: The user's time zone. See Time Zone
+      - name: two_factor_auth_enabled
+        description: If two factor authentication is enabled
+      - name: updated_at
+        description: The time the user was last updated
+      - name: url
+        description: The user's API url
+      - name: social_messaging_user_info
+        description: Values of custom fields in the user's profile. See User Fields
+      - name: social_messaging_user_info
+        description: Values of custom fields in the user's profile. See User Fields
+      - name: whatsapp
+        description: Values of custom fields in the user's profile. See User Fields
+      - name: verified
+        description: Any of the user's identities is verified. See User Identities
