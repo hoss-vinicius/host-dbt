@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: zendesk_tickets
+    description: '{{ doc("zendesk_tickets_description") }}'
+    columns:
+      - name: allow_attachments
+        description: Permission for agents to add add attachments to a comment. Defaults to true
+      - name: allow_channelback	
+        description: Is false if channelback is disabled, true otherwise. Only applicable for channels framework ticket
+      - name: assignee_id	
+        description: The agent currently assigned to the ticket
+      - name: brand_id	
+        description: Enterprise only. The id of the brand this ticket is associated with
+      #- name: collaborator_ids --unused column
+      #  description:
+      - name: created_at	
+        description: When this record was created
+      #- name: custom_fields --unused column
+      #  description:
+      - name: deleted_ticket_form_id	
+        description: Delete multiple tickets permanently
+      - name: description	
+        description: Read-only first comment on the ticket. When creating a ticket, use comment to set the description. See Description and first comment
+      - name: due_at	
+        description: If this is a ticket of type "task" it has a due date. Due date format uses ISO 8601 format
+      #- name: email_cc_ids --unused column
+      #  description:
+      - name: external_id	
+        description: An id you can use to link Zendesk Support tickets to local records
+      #- name: fields --unused column
+      #  description:
+      #- name: follower_ids --unused column
+      #  description:
+      #- name: followup_ids --unused column
+      #  description:
+      - name: forum_topic_id	
+        description: The topic in the Zendesk Web portal this ticket originated from, if any. The Web portal is deprecated
+      - name: generated_timestamp
+        description: The generated_timestamp value is updated for all ticket updates, including system updates
+      - name: group_id	
+        description: The group this ticket is assigned to
+      - name: has_incidents	
+        description: Is true if a ticket is a problem type and has one or more incidents linked to it. Otherwise, the value is false
+      - name: id	
+        description: Automatically assigned when the ticket is created
+      - name: is_public	
+        description: Is true if any comments are public, false otherwise
+      - name: organization_id	
+        description: The organization of the requester. You can only specify the ID of an organization associated with the requester. See Organization Memberships
+      - name: priority	
+        description: The urgency with which the ticket should be addressed. Allowed values are "urgent", "high", "normal", or "low"
+      - name: problem_id	
+        description: For tickets of type "incident", the ID of the problem the incident is linked to
+      - name: raw_subject	
+        description: The dynamic content placeholder, if present, or the "subject" value, if not. See Dynamic Content Items
+      - name: recipient	
+        description: The original recipient e-mail address of the ticket
+      - name: requester_id	
+        description: The user who requested this ticket
+      #- name: satisfaction_rating --unused column
+      #  description:
+      #- name: sharing_agreement_ids --unused column
+      #  description:
+      - name: status	
+        description: The state of the ticket. Allowed values are "new", "open", "pending", "hold", "solved", or "closed"
+      - name: subject	
+        description: The value of the subject field for this ticket
+      - name: submitter_id	
+        description: The user who submitted the ticket. The submitter always becomes the author of the first comment on the ticket
+      #- name: tags --unused column
+      #  description:
+      - name: ticket_form_id	
+        description: Enterprise only. The id of the ticket form to render for the ticket
+      - name: type	
+        description: The type of this ticket. Allowed values are "problem", "incident", "question", or "task"
+      - name: updated_at	
+        description: When this record last got updated
+      - name: url	
+        description: The API url of this ticket
+      #- name: via --unused column
+      #  description:

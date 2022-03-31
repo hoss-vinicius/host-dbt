@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: zendesk_groups
+    description: '{{ doc("zendesk_groups_description") }}'
+    columns:
+      - name: created_at
+        description: The time the group was created
+      - name: default
+        description: If group is default for the account
+      - name: deleted
+        description: Deleted groups get marked as such
+      - name: description
+        description: The description of the group
+      - name: id
+        description: Automatically assigned when creating groups
+      - name: name
+        description: The name of the group
+      - name: updated_at
+        description: The time of the last update of the group
+      - name: url
+        description: The API url of this group
+      - name: dt_ref
+        description: The reference date of data

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: zendesk_organizations
+    description: '{{ doc("zendesk_organizations_description") }}'
+    columns:
+      - name: created_at
+        description: The time the organization was created
+      - name: details
+        description: Any details obout the organization, such as the address
+      #- name: domain_names # unused column
+      #  description: An array of domain names associated with this organization
+      - name: external_id
+        description: A unique external id to associate organizations to an external record
+      - name: group_id
+        description: New tickets from users in this organization are automatically put in this group
+      - name: id
+        description: Automatically assigned when the organization is created
+      - name: name
+        description: A unique name for the organization
+      - name: notes
+        description: Any notes you have about the organization
+      #- name: organization_fields # unused column
+      #  description: Custom fields for this organization
+      - name: shared_comments
+        description: End users in this organization are able to see each other's comments on tickets
+      - name: shared_tickets
+        description: End users in this organization are able to see each other's tickets
+      #- name: tags # unused column
+      #  description: The tags of the organization
+      - name: updated_at
+        description: The time of the last update of the organization
+      - name: url
+        description: The API url of this organization
+      - name: dt_ref
+        description: The reference date of data
